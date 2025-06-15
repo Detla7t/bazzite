@@ -1,4 +1,8 @@
-app/org.mozilla.firefox/x86_64/stable
+app/app.zen_browser.zen/x86_64/stable
+app/org.prismlauncher.PrismLauncher/x86_64/stable
+app/com.heroicgameslauncher.hgl/x86_64/stable
+app/org.qbittorrent.qBittorrent/x86_64/stable
+app/org.keepassxc.KeePassXC/x86_64/stable
 app/org.kde.gwenview/x86_64/stable
 app/org.kde.okular/x86_64/stable
 app/org.kde.kcalc/x86_64/stable
