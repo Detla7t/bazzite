@@ -241,7 +241,7 @@ RUN --mount=type=cache,dst=/var/cache \
     --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=tmpfs,dst=/tmp \
     wget -P /etc/yum.repos.d https://repository.mullvad.net/rpm/stable/mullvad.repo && \
-    rpm-ostree refresh-md && \
+    #rpm-ostree refresh-md && \
     dnf5 -y install \
         twitter-twemoji-fonts \
         google-noto-sans-cjk-fonts \
