@@ -279,6 +279,7 @@ RUN --mount=type=cache,dst=/var/cache \
         kitty \
         mullvad-vpn \
         rclone \
+        libreoffice \
         lshw \
         xdotool \
         wmctrl \
