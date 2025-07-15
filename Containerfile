@@ -312,6 +312,7 @@ RUN --mount=type=cache,dst=/var/cache \
         libvirt \
         lsb_release \
         uupd \
+        ds-inhibit \
         rocm-hip \
         rocm-opencl \
         rocm-clinfo \
@@ -462,6 +463,7 @@ RUN --mount=type=cache,dst=/var/cache \
         dnf5 -y install \
             nautilus-gsconnect \
             steamdeck-backgrounds \
+            steamdeck-gnome-presets \
             gnome-randr-rust \
             gnome-shell-extension-appindicator \
             gnome-shell-extension-user-theme \
@@ -635,6 +637,7 @@ RUN --mount=type=cache,dst=/var/cache \
     systemctl enable bazzite-hardware-setup.service && \
     systemctl disable tailscaled.service && \
     systemctl enable dev-hugepages1G.mount && \
+    systemctl enable ds-inhibit.service && \
     systemctl --global enable bazzite-user-setup.service && \
     systemctl --global enable podman.socket && \
     systemctl --global enable systemd-tmpfiles-setup.service && \
@@ -706,7 +709,6 @@ RUN --mount=type=cache,dst=/var/cache \
             steamdeck-kde-presets \
     ; else \
         dnf5 -y install \
-            steamdeck-gnome-presets \
             gnome-shell-extension-caribou-blocker \
             sddm && \
         ln -sf /usr/share/wallpapers/convergence.jxl /usr/share/backgrounds/default.jxl && \
@@ -733,7 +735,6 @@ RUN --mount=type=cache,dst=/var/cache \
         adjustor \
         acpica-tools \
         vpower \
-        ds-inhibit \
         steam_notif_daemon \
         sdgyrodsu \
         ibus-pinyin \
@@ -836,7 +837,6 @@ RUN --mount=type=cache,dst=/var/cache \
     systemctl enable wireplumber-sysconf.service && \
     systemctl enable pipewire-workaround.service && \
     systemctl enable pipewire-sysconf.service && \
-    systemctl enable ds-inhibit.service && \
     systemctl enable cec-onboot.service && \
     systemctl enable cec-onpoweroff.service && \
     systemctl enable cec-onsleep.service && \
